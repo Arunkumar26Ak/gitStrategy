@@ -5,11 +5,14 @@ pipeline {
   }
   stages {
     stage('Hello') {
-      steps {
-        sh 'echo "Branch creating process starts here @@"'
-        sh 'git checkout -b test'
-        sh 'git push -u origin test'
+      when{
+        branch 'main'
       }
+     steps {
+        sh 'echo "Branch creating process starts here @@"'
+        sh 'git checkout -b 1.0_RC'
+        sh 'git push -u origin 1.0_RC'
+     }
     }
   }
 }
