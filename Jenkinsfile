@@ -9,7 +9,7 @@ pipeline {
         branch 'main'
       }
      steps {
-        sh 'echo "TAG test 1"'
+        sh 'echo "TAG test 3.0"'
         sh 'echo "Branch creating process starts here @@"'
         sh 'git checkout -b 1.0_RC'
         sh 'git push -u origin 1.0_RC'
