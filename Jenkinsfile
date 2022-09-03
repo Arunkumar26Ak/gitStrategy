@@ -7,8 +7,6 @@ pipeline {
     stage('Hello') {
       steps {
         echo "Branch creating process starts here @@"
-        git checkout -b test
-        git push -u origin new-branch
       }
     }
   }
