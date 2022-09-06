@@ -1,20 +1,13 @@
-
 pipeline {
-    agent any
-    stages {
-        stage('Build and Release Feature') {
-  
-        }
-        stage('Build and RC Tag Release - Develop') {
-          
-        }
-        
-        stage('Build and Tag Release - Master') {
-
-          
-        }
-        stage("Build and release - Tag") {
-         
-        }
+  agent any
+  options {
+    buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
+  }
+  stages {
+    stage('Hello') {
+     steps {
+        sh 'echo "TAG test 8.1.0"'
+     }
     }
+  }
 }
