@@ -1,6 +1,4 @@
-void getVarsSetup() {
-    VERSION = sh(returnStdout: true, script: 'grep "version:" release.yml | cut -d" " -f2').trim()
-}
+
 pipeline {
     agent any
     stages {
