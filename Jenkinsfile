@@ -5,9 +5,6 @@ pipeline {
   }
   stages {
     stage('Hello') {
-      when{
-        branch 'master'
-      }
      steps {
         sh 'echo "TAG test 8.1.0"'
         // sh 'echo "Branch creating process starts here @@"'
