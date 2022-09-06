@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Hello') {
       when{
-        branch 'main'
+        branch 'master'
       }
      steps {
         sh 'echo "TAG test 8.1.0"'
